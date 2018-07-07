@@ -54,10 +54,9 @@ end
 #     if word.match(/^[aeiouAEIOU]/)
 #       word_in_pig_latin = word + "way"
 #     else
-#       # Regex returns the first series of constanants of the word
-#       constanants = word.match(/^[^aeiouAEIOU]+/).to_s
-#
-#       word_in_pig_latin = word.delete(constanants) + constanants + "ay"
+#       beginning_constanants = word.match(/^[^aeiouAEIOU]+/).to_s
+
+#       word_in_pig_latin = word.sub(beginning_constanants, '') + beginning_constanants + "ay"
 #     end
 #   end
 # end
